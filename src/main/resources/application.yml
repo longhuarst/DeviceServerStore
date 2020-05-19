@@ -7,7 +7,19 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-
+  rabbitmq:
+    host: 127.0.0.1
+    port: 18100
+    username: admin
+    password: admin
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: create
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
+    show-sql: true
 
 server:
   port: 20000
